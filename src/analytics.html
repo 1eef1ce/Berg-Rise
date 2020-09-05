@@ -1,0 +1,43 @@
+//= templates/header.html
+<div class="page-analytics">
+    //= templates/breadcrumbs.html
+    <section>
+        <div class="container">
+            <h2>Мнения и аналитика</h2>
+            <div class="tabs-container">
+                <nav class="nav tabs" role="tablist">
+                    <a class="tab active" id="tab-analytics-all" data-toggle="pill" href="#analytics-all" role="tab" aria-controls="news-all" aria-selected="true">Все</a>
+                    <a class="tab" id="tab-analytics-1" data-toggle="pill" href="#analytics-1" role="tab" aria-controls="analytics-1" aria-selected="false">Covid-19</a>
+                    <a class="tab" id="tab-analytics-2" data-toggle="pill" href="#analytics-2" role="tab" aria-controls="analytics-2" aria-selected="false">Название категории</a>
+                    <a class="tab" id="tab-analytics-3" data-toggle="pill" href="#analytics-3" role="tab" aria-controls="analytics-3" aria-selected="false">Название категории</a>
+                </nav>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="analytics-all" role="tabpanel" aria-labelledby="tab-analytics-all">
+                    <div class="tiles">
+                        //= templates/article-2.html
+                        //= templates/article-2.html
+                        //= templates/article-2.html
+                    </div>
+                </div>
+                <div class="tab-pane" id="analytics-1" role="tabpanel" aria-labelledby="tab-analytics-1">
+                    <div class="tiles">
+                        //= templates/article-2.html
+                        //= templates/article-2.html
+                    </div>
+                </div>
+                <div class="tab-pane" id="analytics-2" role="tabpanel" aria-labelledby="tab-analytics-2">
+                    <div class="tiles">
+                        //= templates/article-2.html
+                    </div>
+                </div>
+                <div class="tab-pane" id="analytics-3" role="tabpanel" aria-labelledby="tab-analytics-3">
+                    <div class="tiles">
+                        //= templates/article-2.html
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+//= templates/footer.html

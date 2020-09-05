@@ -1,0 +1,2668 @@
+GolosRegular = GolosTextRegular
+GolosMedium = GolosTextMedium
+GolosDemiBold = GolosTextDemiBold
+MerriRegular = MerriweatherRegular
+MerriItalic = MerriweatherItalic
+MerriLightItalic = MerriweatherLightItalic
+RootRegular = PtRootUiRegular
+RootMedium = PtRootUiMedium
+
+colorWhite = #ffffff
+colorWhiteOpacity30 = rgba(255, 255, 255, 0.3)
+colorWhiteOpacity60 = rgba(255, 255, 255, 0.6)
+colorWhiteOpacity80 = rgba(255, 255, 255, 0.8)
+colorWhiteOpacity90 = rgba(255, 255, 255, 0.9)
+colorBlack = #2f2d2e
+colorBlackOpacity80 = rgba(47, 45, 46, 0.8)
+colorBlackOpacity60 = rgba(47, 45, 46, 0.6)
+colorBlackOpacity50 = rgba(47, 45, 46, 0.5)
+colorBlackOpacity40 = rgba(47, 45, 46, 0.4)
+colorBlackOpacity30 = rgba(47, 45, 46, 0.3)
+
+colorDarkBlue = #192d59
+colorBlue = #214a7b
+
+md = 768px
+lg = 960px
+xl = 1200px
+
+@font-face
+  font-family GolosTextRegular
+  src url(../assets/fonts/Golostextregular.woff2) format('woff2'),
+  url(../assets/fonts/Golostextregular.woff) format('woff')
+
+@font-face
+  font-family GolosTextMedium
+  src url(../assets/fonts/Golostextmedium.woff2) format('woff2'),
+  url(../assets/fonts/Golostextmedium.woff) format('woff')
+
+@font-face
+  font-family GolosTextDemiBold
+  src url(../assets/fonts/Golostextdemibold.woff2) format('woff2'),
+  url(../assets/fonts/Golostextdemibold.woff) format('woff')
+
+@font-face
+  font-family MerriweatherRegular
+  src url(../assets/fonts/merriweatherregular.woff2) format('woff2'),
+  url(../assets/fonts/merriweatherregular.woff) format('woff')
+
+@font-face
+  font-family MerriweatherItalic
+  src url(../assets/fonts/merriweatheritalic.woff2) format('woff2'),
+  url(../assets/fonts/merriweatheritalic.woff) format('woff')
+
+@font-face
+  font-family MerriweatherLightItalic
+  src url(../assets/fonts/merriweatherlightitalic.woff2) format('woff2'),
+  url(../assets/fonts/merriweatherlightitalic.woff) format('woff')
+
+@font-face
+  font-family PtRootUiRegular
+  src url(../assets/fonts/Ptrootui.woff2) format('woff2'),
+  url(../assets/fonts/Ptrootui.woff) format('woff')
+
+@font-face
+  font-family PtRootUiMedium
+  src url(../assets/fonts/Ptrootuimedium.woff2) format('woff2'),
+  url(../assets/fonts/Ptrootuimedium.woff) format('woff')
+
+//outline fix
+input
+textarea
+  resize none
+  &:focus
+    outline none!important
+    box-shadow none!important
+
+button
+.btn
+a
+  display inline-block
+  color inherit
+  text-decoration none
+  &:hover
+  &:focus
+    outline none
+    color inherit
+    text-decoration none
+    box-shadow none
+
+button
+  padding 0
+  border 0
+
+ul
+  padding 0
+  margin 0
+  list-style none
+
+//bootstrap macOs fix
+.row
+  &::before
+  &::after
+    display inline-block !important
+    content normal
+
+//** General **//
+body
+  font-family fontRegular, Arial, sans-serif
+  font-size 14px
+  color colorBlack
+  line-height 1
+  background-color colorWhite
+
+img
+  max-width 100%
+  max-height 100%
+
+.container
+  padding 0 16px
+
+  @media (min-width md)
+    max-width 688px
+    padding 0
+
+  @media (min-width xl)
+    max-width 1160px
+
+.row
+  margin-left 0
+  margin-right 0
+
+  @media (min-width md)
+    margin-left -16px
+    margin-right -16px
+
+  @media (min-width xl)
+    margin-left -20px
+    margin-right -20px
+
+.col
+[class*="col-"]
+  padding-left 0
+  padding-right 0
+
+  @media (min-width md)
+    padding-left 16px
+    padding-right 16px
+
+  @media (min-width xl)
+    padding-left 20px
+    padding-right 20px
+
+section
+  padding-bottom 80px
+
+//** Tiles **//
+.tiles
+  display flex
+  flex-wrap wrap
+  align-items stretch
+
+.tile
+  display flex
+  flex-direction column
+  width 100%
+  padding 20px 15px
+  border 1px solid #dcdcdc
+  cursor pointer
+  margin-top -1px
+  &:nth-of-type(1)
+    margin-top 0
+  &:hover
+  &:focus
+    background colorDarkBlue
+    box-shadow 10px 10px 80px rgba(0, 0, 0, 0.1)
+    h3
+    .tile-text
+    .link
+      color colorWhite
+    .link
+      &::after
+        background-image url("data:image/svg+xml,%3Csvg width='21' height='10' viewBox='0 0 21 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.65' x2='6.63747' y2='-0.65' transform='matrix(0.683441 0.716517 0.683441 -0.716517 15.4624 0.488281)' stroke='%23ffffff' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='6.63745' y2='-0.65' transform='matrix(-0.683438 0.716519 0.683438 0.71652 19.9987 5.24414)' stroke='%23ffffff' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='18.67' y2='-0.65' transform='matrix(-1 -1.48064e-07 -2.06472e-07 1 18.67 5.8898)' stroke='%23ffffff' stroke-width='1.3'/%3E%3C/svg%3E")
+    svg
+      path
+        fill colorWhite
+
+  @media (min-width md)
+    width 50%
+    padding 20px 19px
+    &:nth-of-type(2)
+      margin-top 0
+    &:nth-of-type(even)
+      margin-left -1px
+
+  @media (min-width xl)
+    flex-direction row
+    padding 40px
+
+.tile-icon
+  margin-bottom 14px
+  svg
+    width 40px
+    height 40px
+
+  @media (min-width xl)
+    margin 0 25px 0 0
+    svg
+      width 44px
+      height 44px
+
+.tile-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+  margin-bottom 22px
+
+  @media (min-width md)
+    height 4.75em
+    overflow hidden
+    margin-bottom 17px
+
+  @media (min-width xl)
+    height 3em
+    font-size 16px
+    margin-bottom 25px
+
+.article-tile
+  position relative
+  border 1px solid #d2d2d2
+  padding 15px 15px 35px
+  &:hover
+  &:focus
+    background linear-gradient(121.28deg, #FBFBFB 28.1%, #F5F5F5 87.85%)
+    box-shadow 0 10px 70px rgba(10, 28, 50, 0.1)
+    .link
+      color colorBlue
+      &::after
+        background-image url("data:image/svg+xml,%3Csvg width='21' height='10' viewBox='0 0 21 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.65' x2='6.63747' y2='-0.65' transform='matrix(0.683441 0.716517 0.683441 -0.716517 15.4624 0.488281)' stroke='%23214A7B' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='6.63745' y2='-0.65' transform='matrix(-0.683438 0.716519 0.683438 0.71652 19.9987 5.24414)' stroke='%23214A7B' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='18.67' y2='-0.65' transform='matrix(-1 -1.48064e-07 -2.06472e-07 1 18.67 5.8898)' stroke='%23214A7B' stroke-width='1.3'/%3E%3C/svg%3E")
+
+  @media (min-width md)
+    padding 20px 20px 35px
+
+  @media (min-width xl)
+    flex-direction column
+    padding 35px 40px 40px
+
+.article-simple
+
+  @media (min-width xl)
+    width 100%
+    padding 30px
+    .tile-top
+      margin-bottom 57px
+    .tile-title
+      font-size 18px
+      margin-bottom 20px
+    .link
+      font-size 14px
+    .tile-author
+      display none
+    &:nth-of-type(even)
+      margin-left 0
+    &:nth-of-type(2)
+      margin-top -1px
+
+.tile-top
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 60px
+
+  @media (min-width md)
+    margin-bottom 45px
+
+  @media (min-width xl)
+    margin-bottom 90px
+
+.tile-tags
+  display flex
+
+.tile-tag
+  font-family RootMedium
+  font-size 12px
+  line-height 1
+  color colorBlue
+  margin-right 12px
+
+  @media (min-width md)
+    font-size 14px
+    margin-right 15px
+
+  @media (min-width xl)
+    font-size 16px
+
+.tile-date
+  font-family RootMedium
+  font-size 12px
+  line-height 1
+  color colorBlackOpacity40
+
+  @media (min-width md)
+    font-size 14px
+
+  @media (min-width xl)
+    font-size 16px
+
+.tile-title
+  font-family MerriRegular
+  font-size 16px
+  line-height 1.5
+  color #313131
+  margin-bottom 25px
+
+  @media (min-width md)
+    font-size 17px
+
+  @media (min-width xl)
+    max-width 410px
+    font-size 22px
+
+.tile-author
+  position absolute
+  bottom 15px
+  right 15px
+  display flex
+  align-items center
+  justify-content center
+  width 48px
+  height 48px
+  border-radius 100%
+  background #c4c4c4
+  overflow hidden
+  filter grayscale(1)
+
+  @media (min-width md)
+    bottom 20px
+    right 20px
+
+  @media (min-width xl)
+    bottom 40px
+    right 40px
+    width 80px
+    height 80px
+
+//** Breadcrumbs **//
+.breadcrumb-wrapper
+  position relative
+  overflow scroll
+  background transparent
+  padding 16px 0 30px
+
+  @media (min-width md)
+    padding 20px 0 25px
+
+  @media (min-width xl)
+    overflow unset
+    padding 30px 0
+
+.breadcrumb
+  flex-wrap nowrap
+  white-space nowrap
+  padding 0
+  border-radius 0
+  background-color transparent
+  font-family GolosRegular
+  font-size 13px
+  color colorBlackOpacity80
+  margin-bottom 0
+
+  @media (min-width xl)
+    font-size 14px
+
+.breadcrumb-item
+  display flex
+  &.active
+    color colorBlackOpacity30
+    padding-right 16px
+  &+.breadcrumb-item
+    padding-left 8px
+    &::before
+      padding-right 8px
+      color colorBlackOpacity80
+
+//** Headings **//
+h2
+.h2
+  position relative
+  z-index 1
+  font-family MerriRegular
+  font-size 22px
+  line-height 1.4
+  color colorBlack
+  text-align center
+  margin-bottom 30px
+  &::before
+    content ""
+    position absolute
+    z-index -1
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    background url("../assets/images/heading_bg.svg") no-repeat center
+    width 64px
+    height 40px
+    background-size contain
+
+  @media (min-width md)
+    font-size 26px
+    &::before
+      width 79px
+      height 50px
+
+  @media (min-width xl)
+    font-size 38px
+    margin-bottom 50px
+    &::before
+      width 108px
+      height 69px
+
+.h2-nobg
+  &::before
+    content none
+
+.h2-small
+
+  @media (min-width xl)
+    font-size 28px
+
+h3
+.h3
+  font-family GolosMedium
+  font-size 18px
+  line-height 1.4
+  color colorBlack
+  margin-bottom 10px
+
+  @media (min-width md)
+    font-size 17px
+
+  @media (min-width xl)
+    font-size 22px
+    margin-bottom 13px
+
+//** Links and buttons **//
+.link
+  display flex
+  align-items center
+  font-family GolosMedium
+  font-size 12px
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlue
+  &::after
+    content ""
+    background-image url("data:image/svg+xml,%3Csvg width='21' height='10' viewBox='0 0 21 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.65' x2='6.63747' y2='-0.65' transform='matrix(0.683441 0.716517 0.683441 -0.716517 15.4624 0.488281)' stroke='%23214A7B' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='6.63745' y2='-0.65' transform='matrix(-0.683438 0.716519 0.683438 0.71652 19.9987 5.24414)' stroke='%23214A7B' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='18.67' y2='-0.65' transform='matrix(-1 -1.48064e-07 -2.06472e-07 1 18.67 5.8898)' stroke='%23214A7B' stroke-width='1.3'/%3E%3C/svg%3E")
+    width 18px
+    height 8px
+    background-size contain
+    margin-left 6px
+  &:hover
+    color colorBlue
+  &:focus
+    color colorBlue
+    opacity 0.8
+    &::after
+      margin-left 12px
+
+  @media (min-width xl)
+    font-size 16px
+    &::after
+      width 21px
+      height 10px
+      margin-left 12px
+    &:hover
+    &:focus
+      &::after
+        margin-left 18px
+
+.link-back
+  justify-content center
+  font-size 14px
+  &::after
+    content none
+  &::before
+    content ""
+    background url("../assets/images/arrow.svg") no-repeat center
+    width 21px
+    height 10px
+    background-size contain
+    transform rotate(180deg)
+    margin-right 12px
+  &:hover
+  &:focus
+    &::before
+      margin-right 18px
+
+  @media (min-width xl)
+    font-size 16px
+
+.btn
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  width 100%
+  height 50px
+  padding 0
+  border-radius 0
+  border 0
+  font-family GolosMedium
+  font-size 12px
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorWhite
+  background colorDarkBlue
+  &:hover
+  &:focus
+    color colorWhite
+  &:hover
+    &::after
+      content ""
+      position absolute
+      top 0
+      right 0
+      border-bottom 10px solid #d6d6d6
+      border-right 10px solid #f3f3f3
+  &:focus
+    background rgba(25, 45, 89, 0.9)
+    &::after
+      border-width 13px
+
+  @media (min-width md)
+    width 160px
+
+  @media (min-width xl)
+    font-size 14px
+    &:hover
+      &::after
+        border-width 15px
+    &:focus
+      &::after
+        border-width 18px
+
+.btn-download
+  width 238px
+  &::before
+    content ""
+    background url("../assets/images/download_white.svg") no-repeat center
+    width 22px
+    height 22px
+    margin-right 8px
+
+  @media (min-width xl)
+    width 269px
+    &::before
+      width 24px
+      height 24px
+
+//** Header **//
+header
+.header
+  background colorDarkBlue
+  box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.header-container
+  display flex
+  align-items center
+  justify-content space-between
+  width 100%
+  height 60px
+  padding 12px 16px
+
+  @media (min-width md)
+    max-width 688px
+    height 88px
+    padding 20px 0
+    margin 0 auto
+
+  @media (min-width xl)
+    width auto
+    height 92px
+    margin 0
+
+.navbar-toggler
+  padding 0
+  border 0
+  .icon-bar
+    display block
+    width 21px
+    height 2px
+    background colorWhite
+    position relative
+    transform rotate(0)
+    transform-origin left center
+    transition all 0.15s ease
+    @media (min-width md)
+      width 30px
+    &+.icon-bar
+      margin-top 5px
+      @media (min-width md)
+        margin-top 7px
+  &.active
+    .icon-bar
+      &:nth-of-type(1)
+        transform rotate(45deg)
+        top 0
+      &:nth-of-type(2)
+        opacity 0
+      &:nth-of-type(3)
+        transform rotate(-45deg)
+        top 1px
+        @media (min-width md)
+          top 3px
+
+.nav
+  position relative
+  display flex
+  align-items center
+  justify-content space-between
+
+  @media (min-width xl)
+    max-width 1160px
+    margin 0 auto
+
+.nav-center
+  justify-content space-between
+  flex-grow unset
+
+.header-logo
+  width 136px
+
+  @media (min-width md)
+    width 182px
+
+  @media (min-width xl)
+    width 197px
+
+.header-nav
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  height calc(100vh - 60px)
+  border-top 1px solid rgba(255, 255, 255, 0.1)
+
+  @media (min-width xl)
+    height calc(100vh - 88px)
+
+  @media (min-width xl)
+    flex-direction row
+    height auto
+    border-top 0
+    margin 0 -28px
+
+.header-item
+  margin 16px 0
+  transition 0.5s
+
+  @media (min-width xl)
+    margin 0 28px
+
+.header-link
+  font-family MerriRegular
+  font-size 16px
+  line-height 1.25
+  color colorWhiteOpacity90
+  &:hover
+  &:focus
+    color colorWhite
+
+  @media (min-width md)
+    font-size 18px
+
+  @media (min-width xl)
+    font-size 16px
+
+//** Footer **//
+.footer-top
+  background colorDarkBlue
+  padding 30px 0 26px
+
+  @media (min-width md)
+    padding 20px 0 30px
+
+  @media (min-width xl)
+    padding 40px 0 48px
+
+.footer-top-container
+
+  @media (min-width xl)
+    display flex
+    align-items center
+    justify-content space-between
+
+.footer-top-info
+  display flex
+  flex-direction column
+  margin-bottom 26px
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+    justify-content space-between
+    margin-bottom 20px
+
+  @media (min-width xl)
+    flex-direction column
+    align-items flex-start
+    width 40%
+    margin-bottom 0
+
+.footer-logo
+  width 159px
+  margin-bottom 16px
+
+  @media (min-width md)
+    margin-bottom 0
+
+  @media (min-width xl)
+    width 200px
+    margin-bottom 23px
+
+.footer-top-text
+  font-family MerriRegular
+  font-size 14px
+  line-height 1.6
+  color colorWhiteOpacity30
+
+  @media (min-width xl)
+    font-size 18px
+    width 283px
+
+.footer-menu
+  display none
+
+  @media (min-width md)
+    display flex
+    align-items center
+    margin-bottom 30px
+    li
+      transition 0.5s
+      &+li
+        margin-left 40px
+      a
+        font-family MerriRegular
+        font-size 14px
+        line-height 1.25
+        color colorWhiteOpacity90
+        &:hover
+        &:focus
+          color colorWhiteOpacity90
+
+  @media (min-width xl)
+    margin-bottom 42px
+    li
+      &+li
+        margin-left 56px
+      a
+        font-size 16px
+
+.footer-contacts-container
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+
+.footer-contacts
+  display flex
+  align-items center
+  justify-content space-between
+  padding 12px 12px 12px 16px
+  border 1px solid #3b4e78
+  &+.footer-contacts
+    border-top 0
+
+  @media (min-width md)
+    padding 14px 16px
+    &+.footer-contacts
+      border-top 1px solid #3b4e78
+      border-left 0
+
+  @media (min-width xl)
+    padding 19px 25px
+
+.footer-phone
+  flex-shrink 0
+  border-bottom 0
+  padding-bottom 4px
+
+  @media (min-width md)
+    border-bottom 1px solid #3b4e78
+    padding-bottom 14px
+    margin-left 8px
+
+  @media (min-width xl)
+    margin-left 16px
+    padding-bottom 19px
+
+.footer-mail
+  flex-shrink 0
+  padding-top 4px
+
+  @media (min-width md)
+    padding-top 14px
+
+  @media (min-width xl)
+    padding-top 19px
+
+.footer-contacts-link
+  font-family RootRegular
+  font-size 16px
+  line-height 1.25
+  color colorWhite
+  &:hover
+  &:focus
+    color colorWhite
+  &+.footer-contacts-link
+    margin-top 12px
+
+.footer-contacts-address
+  font-family RootRegular
+  font-size 13px
+  line-height 1.6
+  color colorWhite
+  margin-right 12px
+
+  @media (min-width md)
+    font-size 14px
+
+.footer-social
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  width 30px
+  height 30px
+  border 1px solid #3b4e78
+  &:hover
+  &:focus
+    border-color colorWhite
+    svg
+      g
+        opacity 1
+
+  @media (min-width md)
+    width 34px
+    height 34px
+    &+.footer-social
+      margin-top 8px
+      @media (min-width xl)
+        margin-top 16px
+
+.footer-bottom
+  background colorBlack
+  padding 18px 0
+
+  @media (min-width md)
+    padding 20px 0
+
+  @media (min-width xl)
+    padding 25px 0
+
+.footer-bottom-info
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+    justify-content space-between
+
+.footer-bottom-text
+  font-family RootRegular
+  font-size 12px
+  line-height 1.25
+  color colorWhiteOpacity30
+  margin-bottom 12px
+
+  @media (min-width md)
+    margin-bottom 0
+
+  @media (min-width xl)
+    font-size 14px
+
+.footer-link
+  font-family RootRegular
+  font-size 12px
+  line-height 1.25
+  color colorWhiteOpacity60
+  text-decoration underline
+  &:hover
+  &:focus
+    color colorWhiteOpacity60
+    text-decoration underline
+
+  @media (min-width xl)
+    font-size 14px
+
+.footer-link-dark
+  color colorWhiteOpacity30
+  &:hover
+  &:focus
+    color colorWhiteOpacity30
+
+//** Form **//
+.form
+  padding 30px 16px
+  border 8px solid colorWhite
+  margin 0 -8px
+  background url("../assets/images/form_bg_320.jpg") no-repeat center
+  background-size cover
+
+  @media (min-width md)
+    padding 40px 30px 30px
+    margin 0
+    background url("../assets/images/form_bg.jpg") no-repeat center
+    background-size cover
+    box-shadow 10px 10px 80px rgba(10, 28, 50, 0.1)
+
+  @media (min-width xl)
+    border-width 10px
+    padding 70px 90px 60px
+
+.form-block
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+    justify-content space-between
+    margin 0 -15px
+
+  @media (min-width xl)
+    margin 0 -20px
+
+.form-bottom
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+
+  @media (min-width xl)
+    width 50%
+
+.form-group
+  position relative
+  width 100%
+  margin-bottom 40px
+
+  @media (min-width md)
+    margin 0 15px 40px
+
+  @media (min-width xl)
+    margin 0 20px 50px
+
+.form-control
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlack
+  background transparent
+  height 36px
+  padding 0 0 10px
+  border none
+  border-bottom 1px solid #cecece
+  border-radius 0
+  &:focus
+    color colorBlack
+    background transparent
+    border 0
+
+  @media (min-width md)
+    font-size 16px
+    height 38px
+
+  @media (min-width xl)
+    font-size 18px
+    height 45px
+
+.form-label
+  font-family RootRegular
+  font-size 14px
+  color colorBlackOpacity50
+  position absolute
+  pointer-events none
+  top 0
+  transition 0.2s ease all
+  margin-bottom 0
+
+  @media (min-width md)
+    font-size 16px
+
+  @media (min-width xl)
+    font-size 18px
+
+.form-control:focus ~ .form-label
+.form-control:valid ~ .form-label
+  top -20px
+  font-size 12px
+  color colorDarkBlue
+
+  @media (min-width xl)
+    font-size 13px
+
+.bar
+  position relative
+  display block
+
+.bar:before
+.bar:after
+  content ""
+  height 1px
+  width 0
+  bottom 0
+  position absolute
+  background colorBlue
+  transition 0.2s ease all
+
+.bar:before
+  left 50%
+
+.bar:after
+  right 50%
+
+.form-control:focus ~ .bar:before
+.form-control:focus ~ .bar:after
+  width 50%
+
+.highlight
+  position absolute
+  top 25%
+  left 0
+  pointer-events none
+  opacity 0.5
+
+.form-control:focus ~ .highlight
+  animation inputHighlighter 0.3s ease
+
+@-webkit-keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+@-moz-keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+@keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+.form-text
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity60
+  margin-top 20px
+  a
+    text-decoration underline
+    &:hover
+    &:focus
+      text-decoration underline
+
+  @media (min-width md)
+    font-size 13px
+    margin-top 0
+    margin-left 24px
+
+  @media (min-width xl)
+    font-size 14px
+
+//** Index **//
+.page-index
+  background url("../assets/images/index_bg_320.png") no-repeat top
+  background-size cover
+  padding-top 10px
+
+  @media (min-width md)
+    background url("../assets/images/index_bg_768.png") no-repeat top
+    background-size cover
+    padding-top 40px
+
+  @media (min-width xl)
+    background url("../assets/images/index_bg_1440.png") no-repeat top
+    background-size cover
+    padding-top 60px
+
+.info
+  position relative
+  display flex
+  flex-direction column
+  border 8px solid colorWhite
+  padding 35px 16px 0
+  margin 0 -8px
+  background url("../assets/images/info_bg_320.jpg") no-repeat center
+  background-size cover
+
+  @media (min-width md)
+    flex-direction row
+    padding 32px 0 24px 27px
+    margin 0
+    background url("../assets/images/info_bg.jpg") no-repeat center
+    background-size cover
+
+  @media (min-width xl)
+    border-width 10px
+    padding 80px 0 20px 100px
+
+.info-container
+  text-align center
+  margin-bottom 15px
+
+  @media (min-width md)
+    max-width 486px
+    text-align left
+    margin-bottom 0
+
+  @media (min-width xl)
+    max-width 675px
+
+.info-title
+  font-family MerriRegular
+  font-size 22px
+  line-height 1.4
+  color colorBlack
+  margin-bottom 10px
+
+  @media (min-width md)
+    font-size 26px
+    margin-bottom 8px
+
+  @media (min-width xl)
+    font-size 36px
+    margin-bottom 10px
+
+.info-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width md)
+    font-size 15px
+
+  @media (min-width xl)
+    font-size 18px
+
+.info-btn
+  display none
+
+  @media (min-width md)
+    display flex
+    align-items center
+    justify-content center
+    flex-shrink 0
+    width 182px
+    height 50px
+    padding 0
+    border-radius 0
+    border 0
+    font-family GolosMedium
+    font-size 12px
+    letter-spacing 0.06em
+    text-transform uppercase
+    color colorWhite
+    background colorDarkBlue
+    margin 32px 0 0 -35px
+    &:hover
+    &:focus
+      color colorWhite
+      &::after
+        margin-left 14px
+    &::after
+      content ""
+      background-image url("data:image/svg+xml,%3Csvg width='21' height='10' viewBox='0 0 21 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.65' x2='6.63747' y2='-0.65' transform='matrix(0.683441 0.716517 0.683441 -0.716517 15.4624 0.488281)' stroke='%23ffffff' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='6.63745' y2='-0.65' transform='matrix(-0.683438 0.716519 0.683438 0.71652 19.9987 5.24414)' stroke='%23ffffff' stroke-width='1.3'/%3E%3Cline y1='-0.65' x2='18.67' y2='-0.65' transform='matrix(-1 -1.48064e-07 -2.06472e-07 1 18.67 5.8898)' stroke='%23ffffff' stroke-width='1.3'/%3E%3C/svg%3E")
+      width 18px
+      height 8px
+      background-size contain
+      margin-left 8px
+
+  @media (min-width xl)
+    justify-content flex-end
+    width 286px
+    height 68px
+    font-size 16px
+    padding-right 21px
+    margin 54px 0 35px -110px
+    &::after
+      width 21px
+      height 10px
+      margin-left 12px
+
+.info-lawyer
+  display none
+
+  @media (min-width md)
+    display block
+    text-align right
+    width 242px
+    float right
+    margin-right 52px
+
+  @media (min-width xl)
+    width 283px
+
+.info-lawyer-name
+  font-family GolosMedium
+  font-size 12px
+  line-height 1.5
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 8px
+
+  @media (min-width xl)
+    font-size 15px
+    margin-bottom 2px
+
+.info-lawyer-text
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width xl)
+    font-size 14px
+
+.info-img
+  height 235px
+
+  @media (min-width md)
+    position absolute
+    bottom -24px
+    right 0
+    width 216px
+    height 245px
+
+  @media (min-width xl)
+    bottom -20px
+    width 430px
+    height 446px
+
+.swiper-info-custom
+  position relative
+  width 100%
+  height 100%
+
+.pagination
+  &.swiper-info-pagination
+    bottom -38px
+
+    @media (min-width md)
+      display flex
+      bottom 8px
+      right auto
+
+    @media (min-width xl)
+      bottom 40px
+
+.swiper-info-img
+  width 100%
+  height 100%
+  .swiper-slide
+    display flex
+    justify-content center
+
+//** About **//
+.page-about
+  background-image url("../assets/images/about_bg_320.png")
+  background-repeat no-repeat
+  background-position bottom
+  background-size cover
+  padding-top 80px
+
+  @media (min-width md)
+    background-image url("../assets/images/about_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/about_bg_1440.png")
+    padding-top 120px
+
+.about-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.8
+  color colorBlackOpacity80
+  text-align center
+  margin-bottom 20px
+
+  @media (min-width md)
+    font-size 16px
+
+  @media (min-width xl)
+    font-size 18px
+
+.about-tile-text
+  margin-bottom 0
+
+  @media (min-width md)
+    height 6em
+
+.section-quote
+  padding-bottom 0
+
+.quote-wrapper
+  text-align center
+  background url("../assets/images/quote_bg_320.png") no-repeat top center
+  background-size cover
+
+  @media (min-width md)
+    text-align left
+    background url("../assets/images/quote_bg_768.png") no-repeat top center
+    background-size cover
+
+  @media (min-width xl)
+    background url("../assets/images/quote_bg_1440.png") no-repeat top center
+    background-size cover
+
+.quote
+  display flex
+  flex-direction column
+  padding-top 72px
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+    padding-top 80px
+
+  @media (min-width xl)
+    padding-top 122px
+
+.quote-container
+  margin-bottom 20px
+
+  @media (min-width md)
+    order 2
+    margin-bottom 0
+
+  @media (min-width xl)
+    max-width 600px
+
+.quote-text
+  position relative
+  font-family MerriItalic
+  font-size 20px
+  line-height 1.4
+  color colorDarkBlue
+  margin-bottom 26px
+  &::before
+    content ""
+    position absolute
+    top -22px
+    right 0
+    background url("../assets/images/quotes.svg") no-repeat center
+    width 22px
+    height 22px
+    background-size contain
+
+  @media (min-width md)
+    font-size 26px
+    margin-bottom 30px
+    &::before
+      top -29px
+      right auto
+      left -29px
+      width 29px
+      height 29px
+
+  @media (min-width xl)
+    font-size 36px
+    margin-bottom 50px
+    &::before
+      top -38px
+      left -38px
+      width 38px
+      height 38px
+
+.quote-lawyer-info
+
+  @media (min-width md)
+    width 55%
+    float right
+
+  @media (min-width xl)
+    width 70%
+
+.quote-lawyer-name
+  font-family GolosMedium
+  font-size 14px
+  line-height 1.5
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 6px
+
+  @media (min-width md)
+    font-size 12px
+    margin-bottom 8px
+
+  @media (min-width xl)
+    font-size 18px
+
+.quote-lawyer-position
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width xl)
+    font-size 16px
+
+.quote-lawyer-img
+  height 250px
+  margin 0 auto
+
+  @media (min-width md)
+    order 1
+    height 332px
+
+  @media (min-width xl)
+    height auto
+
+.feedback
+  position relative
+  background colorDarkBlue
+  padding 20px
+  margin-bottom 16px
+  &::before
+    position absolute
+    top 11px
+    left 12px
+    content ""
+    background url("../assets/images/quotes_transparent.svg") no-repeat center
+    width 30px
+    height 30px
+    background-size contain
+  &::after
+    content ""
+    position absolute
+    top 0
+    right 0
+    border-bottom 18px solid #d6d6d6
+    border-right 18px solid #f3f3f3
+
+  @media (min-width md)
+    padding 30px 24px 20px
+    margin-bottom 0
+    &::before
+      top 15px
+      left 18px
+    &::after
+      border-width 23px
+
+  @media (min-width xl)
+    padding 65px 50px 55px
+    &::before
+      top 29px
+      left 30px
+      width 40px
+      height 40px
+
+.feedback-text
+  font-family MerriLightItalic
+  font-size 16px
+  line-height 1.8
+  color colorWhiteOpacity80
+
+  @media (min-width md)
+    font-size 18px
+
+  @media (min-width xl)
+    font-size 22px
+
+.feedback-author
+  height 100%
+  border 1px solid #dcdcdc
+  padding 20px
+
+  @media (min-width md)
+    padding 23px 15px 15px
+
+  @media (min-width xl)
+    padding 30px
+
+.feedback-author-name
+  font-family GolosMedium
+  font-size 14px
+  line-height 1.5
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 8px
+
+  @media (min-width md)
+    font-size 12px
+
+  @media (min-width xl)
+    font-size 18px
+
+.feedback-author-position
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity80
+  padding-bottom 60px
+
+  @media (min-width xl)
+    font-size 16px
+
+.callback-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+  text-align center
+  margin-bottom 20px
+
+  @media (min-width md)
+    font-size 16px
+    margin-bottom 30px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 50px
+
+//** Team **//
+.page-team
+  background-image url("../assets/images/team_bg_320.png")
+  background-repeat no-repeat
+  background-position top
+  background-size cover
+
+  @media (min-width md)
+    background-image url("../assets/images/team_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/team_bg_1440.png")
+
+.team-lawyer
+  position relative
+  display flex
+  flex-direction column
+  background transparent
+  border 8px solid colorWhite
+  padding 32px 16px 0
+  text-align center
+  &+.team-lawyer
+    margin-top 30px
+  &:hover
+  &:focus
+    background linear-gradient(136.32deg, #FBFBFB 28.1%, #F5F5F5 87.85%)
+    box-shadow 10px 20px 100px rgba(10, 28, 50, 0.15)
+
+  @media (min-width md)
+    flex-direction row
+    justify-content flex-end
+    padding 30px 20px
+    text-align left
+
+  @media (min-width xl)
+    justify-content flex-start
+    border-width 10px
+    padding 50px 0 60px
+    &+.team-lawyer
+      margin-top 100px
+
+.lawyer-container
+  margin-bottom 20px
+
+  @media (min-width md)
+    width 380px
+    margin-bottom 0
+
+  @media (min-width xl)
+    width 45%
+    margin-left 390px
+
+.lawyer-name
+  font-family GolosMedium
+  font-size 18px
+  line-height 1.5
+  text-transform uppercase
+  letter-spacing 0.06em
+  color colorBlack
+  margin-bottom 5px
+
+  @media (min-width xl)
+    font-size 26px
+    margin-bottom 10px
+
+.lawyer-position
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+  margin-bottom 30px
+
+  @media (min-width md)
+    margin-bottom 26px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 40px
+
+.lawyer-text
+  display none
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width md)
+    display block
+    margin-bottom 40px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 60px
+
+.lawyer-img
+  background-size contain
+  background-repeat no-repeat
+  background-position center
+  width 100%
+  height 236px
+
+  @media (min-width md)
+    position absolute
+    bottom 0
+    left 0
+    width 260px
+    height 260px
+
+  @media (min-width xl)
+    width 390px
+    height 390px
+
+//** Lawyer **//
+.section-lawyer-top
+  padding-bottom 0
+
+.page-lawyer
+  background-image url("../assets/images/lawyer_bg_320.png")
+  background-repeat no-repeat
+  background-position top
+  background-size cover
+  padding-top 80px
+
+  @media (min-width md)
+    background-image url("../assets/images/lawyer_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/lawyer_bg_1440.png")
+    padding-top 120px
+
+.personal
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+    align-items flex-end
+
+.personal-container
+  position relative
+  margin-bottom 25px
+
+  @media (min-width md)
+    width 400px
+    flex-shrink 0
+    margin 0 0 23px 30px
+    order 2
+
+  @media (min-width xl)
+    width 660px
+    margin 0 0 45px 40px
+
+.personal-position
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+  margin-bottom 20px
+
+  @media (min-width md)
+    margin-bottom 15px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 50px
+
+.personal-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.8
+  color colorBlackOpacity80
+  margin-bottom 25px
+
+  @media (min-width md)
+    margin-bottom 20px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 50px
+
+.personal-tags
+  margin -5px
+  margin-bottom 28px
+
+  @media (min-width md)
+    margin -5px -7px
+    margin-bottom 40px
+
+  @media (min-width xl)
+    width 60%
+    margin -5px -10px
+    margin-bottom 83px
+
+.personal-tag
+  display inline-flex
+  font-family RootMedium
+  font-size 14px
+  line-height 1
+  color colorBlue
+  margin 5px
+
+  @media (min-width md)
+    margin 5px 7px
+
+  @media (min-width xl)
+    font-size 16px
+    margin 5px 10px
+
+.personal-link
+  font-family GolosRegular
+  font-size 16px
+  line-height 1.5
+  color colorBlack
+  &+.personal-link
+    margin-top 14px
+
+  @media (min-width md)
+    &+.personal-link
+      margin-top 0
+      margin-left 35px
+
+  @media (min-width xl)
+    font-size 20px
+    &+.personal-link
+      margin-left 40px
+
+.personal-socials
+  position absolute
+  bottom 0
+  right 0
+  display flex
+  flex-direction column
+
+  @media (min-width xl)
+    flex-direction row
+
+.personal-social
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  width 30px
+  height 30px
+  background colorWhite
+  border 1px solid #e3e3e3
+  &+.personal-social
+    margin-top 8px
+  svg
+    width 12px
+  &:hover
+  &:focus
+    background colorDarkBlue
+    border-color colorDarkBlue
+    svg
+      path
+        fill colorWhite
+
+  @media (min-width xl)
+    width 42px
+    height 42px
+    &+.personal-social
+      margin 0 0 0 10px
+    svg
+      width 16px
+
+.personal-img
+
+  @media (min-width md)
+    order 1
+
+.work-tile
+  height 100%
+  border 1px solid #d2d2d2
+  padding 20px
+  &:hover
+  &:focus
+    background colorDarkBlue
+    border-color colorDarkBlue
+    .work-date
+    .work-text
+      color colorWhite
+
+  @media (min-width md)
+    padding 20px 15px
+
+  @media (min-width xl)
+    padding 30px
+
+.work-date
+  font-family MerriRegular
+  font-size 22px
+  line-height 1.3
+  color colorBlackOpacity30
+  margin-bottom 10px
+
+  @media (min-width xl)
+    font-size 24px
+    margin-bottom 18px
+
+.work-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width xl)
+    font-size 16px
+
+.case-tile
+  display flex
+  flex-direction column
+  justify-content space-between
+  height 100%
+  border 1px solid #d2d2d2
+  padding 15px 15px 20px
+  &:hover
+  &:focus
+    background linear-gradient(116.35deg, #FBFBFB 28.1%, #F5F5F5 87.85%)
+    box-shadow 0 10px 70px rgba(10, 28, 50, 0.1)
+
+  @media (min-width md)
+    &+.case-tile
+      margin-left -1px
+
+  @media (min-width xl)
+    padding 40px
+
+.case-title
+  font-family GolosMedium
+  font-size 18px
+  line-height 1.4
+  color colorBlack
+  margin-bottom 40px
+
+  @media (min-width md)
+    font-size 16px
+    margin-bottom 20px
+
+  @media (min-width xl)
+    font-size 20px
+    margin-bottom 30px
+
+//** Analytics **//
+.page-analytics
+  background-image url("../assets/images/analytics_bg_320.png")
+  background-repeat no-repeat
+  background-position bottom
+  background-size cover
+
+  @media (min-width md)
+    background-image url("../assets/images/analytics_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/analytics_bg_1440.png")
+
+.tabs-container
+  margin 0 -16px
+
+  @media (min-width md)
+    margin 0
+
+.tabs
+  display flex
+  align-items center
+  flex-wrap nowrap
+  overflow scroll
+  height 20px
+  margin-bottom 30px
+
+  @media (min-width md)
+    flex-wrap wrap
+    justify-content center
+    overflow auto
+
+  @media (min-width xl)
+    margin-bottom 40px
+
+.tab
+  display flex
+  flex-shrink 0
+  font-family GolosMedium
+  font-size 14px
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlackOpacity30
+  &:hover
+  &:focus
+  &.active
+    font-family GolosDemiBold
+    color colorBlue
+    border-bottom 2px solid colorBlue
+  &+.tab
+    margin-left 34px
+  &:first-of-type
+    margin-left 16px
+  &:last-of-type
+    margin-right 16px
+
+  @media (min-width md)
+    &+.tab
+      margin-left 40px
+    &:first-of-type
+      margin-left 0
+    &:last-of-type
+      margin-right 0
+
+  @media (min-width xl)
+    font-size 16px
+    &+.tab
+      margin-left 50px
+
+//** Practice **//
+.page-practices
+  background-image url("../assets/images/practices_bg_320.png")
+  background-repeat no-repeat
+  background-position bottom
+  background-size cover
+
+  @media (min-width md)
+    background-image url("../assets/images/practices_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/practices_bg_1440.png")
+
+.page-practice
+  background-image url("../assets/images/practice_bg_320.png")
+  background-repeat no-repeat
+  background-position top
+  background-size cover
+  padding-top 82px
+
+  @media (min-width md)
+    background-image url("../assets/images/practice_bg_768.png")
+    padding-top 94px
+
+  @media (min-width xl)
+    background-image url("../assets/images/practice_bg_1440.png")
+    padding-top 120px
+
+.practice-tabs
+  display flex
+  align-items center
+  flex-wrap nowrap
+  overflow scroll
+  margin-bottom 30px
+
+  @media (min-width md)
+    flex-wrap wrap
+    overflow unset
+    margin-bottom 0
+
+.practice-tab
+  display flex
+  flex-shrink 0
+  font-family GolosRegular
+  font-size 14px
+  line-height 1.6
+  color colorBlack
+  background colorWhite
+  border 1px solid #d2d2d2
+  width 208px
+  padding 11px 16px
+  &:hover
+  &:focus
+    border-color colorWhite
+    box-shadow 0 10px 50px rgba(10, 28, 50, 0.1)
+  &.active
+    color colorWhite
+    background colorDarkBlue
+    border-color colorDarkBlue
+    svg
+      path
+        fill colorWhite
+  &+.practice-tab
+    margin-left 8px
+  &:first-of-type
+    margin-left 16px
+  &:last-of-type
+    margin-right 16px
+
+  @media (min-width md)
+    width 100%
+    padding 15px 16px
+    &+.practice-tab
+      margin-left 0
+      margin-top 16px
+    &:first-of-type
+      margin-left 0
+    &:last-of-type
+      margin-right 0
+
+  @media (min-width xl)
+    font-size 17px
+    padding 20px
+
+.tab-icon
+  margin-right 10px
+  svg
+    width 28px
+    height 28px
+
+  @media (min-width xl)
+    margin-right 16px
+    svg
+      width 32px
+      height 32px
+
+.practice-subtitle
+  font-family RootMedium
+  font-size 16px
+  line-height 1.6
+  color colorBlack
+  margin-bottom 15px
+
+  @media (min-width md)
+    font-size 18px
+    margin-bottom 10px
+
+  @media (min-width xl)
+    font-size 20px
+    margin-bottom 20px
+
+.practice-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.8
+  color colorBlackOpacity80
+  margin-bottom 15px
+
+  @media (min-width md)
+    font-size 16px
+    margin-bottom 20px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 30px
+
+.practice
+  border 1px solid #d2d2d2
+  padding 25px 20px 15px 25px
+
+  @media (min-width md)
+    padding 30px 20px 25px 30px
+
+  @media (min-width xl)
+    padding 40px 40px 40px 50px
+
+.practice-title
+  font-family MerriRegular
+  font-size 18px
+  line-height 1.6
+  color colorBlackOpacity30
+  margin-bottom 10px
+
+  @media (min-width md)
+    font-size 22px
+
+  @media (min-width xl)
+    font-size 26px
+    margin-bottom 15px
+
+.practice-list
+  font-family RootMedium
+  font-size 14px
+  line-height 1.8
+  color colorBlackOpacity80
+  li
+    display flex
+    margin-left -13px
+    &::before
+      content ""
+      width 5px
+      height 5px
+      background colorDarkBlue
+      margin 0.7em 8px 0 0
+      flex-shrink 0
+
+  @media (min-width xl)
+    font-size 18px
+    li
+      margin-left -24px
+      &::before
+        width 6px
+        height 6px
+        margin 0.7em 18px 0 0
+
+.practice-lawyers
+  display flex
+  flex-wrap wrap
+  align-items stretch
+
+  @media (min-width md)
+    margin 0 -16px
+
+  @media (min-width xl)
+    margin 0 -20px
+
+.practice-lawyer
+  display flex
+  align-items center
+  border 6px solid colorWhite
+  &+.practice-lawyer
+    margin-top 16px
+  &:hover
+  &:focus
+    background linear-gradient(130.91deg, #FBFBFB 28.1%, #F5F5F5 87.85%)
+    box-shadow 10px 20px 100px rgba(10, 28, 50, 0.15)
+
+  @media (min-width md)
+    width calc(50% - 32px)
+    margin 0 16px
+    &+.practice-lawyer
+      margin-top 0
+
+  @media (min-width xl)
+    width calc(50% - 40px)
+    border-width 10px
+    margin 0 20px
+
+.practice-lawyer-container
+  flex-shrink 0
+  width 50%
+
+  @media (min-width xl)
+    width 57.5%
+
+.practice-lawyer-name
+  font-family GolosMedium
+  font-size 14px
+  line-height 1.4
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 6px
+
+  @media (min-width xl)
+    font-size 18px
+    margin-bottom 8px
+
+.practice-lawyer-position
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity80
+  margin-bottom 20px
+
+  @media (min-width xl)
+    font-size 16px
+    margin-bottom 45px
+
+//** Article **//
+.article-info
+  display flex
+  margin-bottom 20px
+
+  @media (min-width md)
+    margin-bottom 25px
+
+  @media (min-width xl)
+    margin-bottom 35px
+
+.article-tag
+  font-family RootMedium
+  font-size 14px
+  line-height 1
+  color colorDarkBlue
+  margin-right 20px
+
+  @media (min-width xl)
+    font-size 16px
+    margin-right 30px
+
+.article-date
+  font-family RootMedium
+  font-size 14px
+  line-height 1
+  color colorBlackOpacity40
+
+  @media (min-width xl)
+    font-size 16px
+
+.article-author
+  display flex
+  align-items center
+  padding 0 16px 0 0
+  margin-bottom 25px
+  background url("../assets/images/author_bg.jpg") no-repeat center
+  background-size cover
+
+  @media (min-width md)
+    margin-bottom 30px
+
+  @media (min-width xl)
+    margin-bottom 40px
+
+.author-img
+  flex-shrink 0
+  max-width 100px
+  filter grayscale(1)
+
+.author-name
+  font-family GolosMedium
+  font-size 14px
+  line-height 1.5
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlack
+
+  @media (min-width md)
+    font-size 16px
+
+  @media (min-width xl)
+    font-size 18px
+
+.author-position
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity80
+
+  @media (min-width md)
+    font-size 14px
+
+  @media (min-width xl)
+    font-size 16px
+
+.article-subtitle
+  font-family GolosMedium
+  font-size 16px
+  line-height 1.4
+  color #48474c
+  margin-bottom 10px
+
+  @media (min-width md)
+    font-size 18px
+
+  @media (min-width xl)
+    font-size 20px
+
+.article-text
+  font-family RootRegular
+  font-size 14px
+  line-height 1.8
+  color #48474c
+  p
+    margin-bottom 20px
+
+  @media (min-width md)
+    font-size 16px
+    p
+      margin-bottom 30px
+
+  @media (min-width xl)
+    font-size 18px
+
+.article-img
+  margin-bottom 12px
+  img
+    width 100%
+
+  @media (min-width md)
+    margin-bottom 15px
+
+  @media (min-width xl)
+    margin-bottom 20px
+
+.article-text-small
+  font-family RootRegular
+  font-size 12px
+  line-height 1.5
+  color colorBlackOpacity60
+  margin-bottom 20px
+
+  @media (min-width md)
+    font-size 14px
+    margin-bottom 30px
+
+  @media (min-width xl)
+    font-size 16px
+
+//** Contacts **//
+.page-contacts
+  background-image url("../assets/images/contacts_bg_320.png")
+  background-repeat no-repeat
+  background-position bottom
+  background-size cover
+
+  @media (min-width md)
+    background-image url("../assets/images/contacts_bg_768.png")
+
+  @media (min-width xl)
+    background-image url("../assets/images/contacts_bg_1440.png")
+
+.map-container
+  padding 0
+
+.map
+  position relative
+  height 586px
+  img
+    height 100%
+
+  @media (min-width md)
+    height 390px
+
+  @media (min-width xl)
+    height 505px
+
+.contacts-container
+  position absolute
+  top 30px
+  left 16px
+  right 16px
+  padding 25px 16px 30px
+  border 8px solid colorWhite
+  box-shadow 10px 10px 80px rgba(10, 28, 50, 0.1)
+  background url("../assets/images/contacts_bg.jpg") no-repeat center
+
+  @media (min-width md)
+    bottom 30px
+    left 30px
+    right auto
+    width 53.5%
+    padding 30px
+
+  @media (min-width xl)
+    top 60px
+    bottom 60px
+    left 60px
+    width 36%
+    padding 50px 30px 50px 50px
+
+.contacts-title
+  font-family MerriRegular
+  font-size 20px
+  line-height 1
+  color colorBlack
+  margin-bottom 25px
+
+  @media (min-width md)
+    font-size 22px
+    margin-bottom 30px
+
+  @media (min-width xl)
+    font-size 26px
+    margin-bottom 40px
+
+.contacts
+  &+.contacts
+    margin-top 20px
+    @media (min-width xl)
+      margin-top 24px
+
+.contacts-text
+  font-family GolosRegular
+  font-size 10px
+  line-height 1
+  letter-spacing 0.06em
+  text-transform uppercase
+  color colorBlackOpacity30
+  margin-bottom 7px
+
+  @media (min-width md)
+    font-size 12px
+
+  @media (min-width xl)
+    font-size 13px
+    margin-bottom 8px
+
+.contacts-address
+  font-family GolosRegular
+  font-size 14px
+  line-height 1.5
+  color colorBlack
+
+  @media (min-width md)
+    font-size 16px
+
+  @media (min-width xl)
+    font-size 18px
+
+.contacts-link
+  font-family GolosRegular
+  font-size 16px
+  line-height 1.5
+  color colorBlack
+
+  @media (min-width md)
+    font-size 18px
+
+  @media (min-width xl)
+    font-size 20px
+
+//** 404 **//
+.section-notfound
+  display flex
+  align-items center
+  justify-content center
+  width 100vw
+  height 100vh
+  background url("../assets/images/404_bg.png") no-repeat center
+  background-size cover
+  padding-bottom 0
+
+.notfound
+  position relative
+  z-index 1
+  display flex
+  flex-direction column
+  height 100%
+
+  @media (min-width md)
+    height 325px
+
+  @media (min-width xl)
+    height 492px
+
+.notfound-container
+  position absolute
+  bottom 29%
+  left 0
+  right 0
+  margin auto
+  h2
+    position relative
+    z-index -1
+
+  @media (min-width md)
+    bottom 24px
+
+  @media (min-width xl)
+    bottom 38px
+
+//** Sliders **//
+.swiper-custom
+  position relative
+  .swiper-container
+    padding 30px 0
+    margin -30px 0
+
+    @media (min-width xl)
+      padding 50px 0
+      margin -50px 0
+
+.swiper-slide
+  height auto
+
+.pagination
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  z-index 100
+  margin auto
+  display flex
+  align-items center
+  justify-content center
+  outline none
+
+  @media (min-width md)
+    display none
+
+.nav-bullet
+  width 16px
+  height 2px
+  margin 0 7px
+  background colorDarkBlue
+  opacity 0.22
+  cursor pointer
+  &:focus
+    outline none
+  &.active
+    opacity 1
+    height 6px
+
+  @media (min-width xl)
+    width 18px
+    margin 0 11px
+
+.navigation
+  display none
+
+  @media (min-width md)
+    display block
+
+.nav-next,
+.nav-prev
+
+  @media (min-width md)
+    position absolute
+    top calc(50% - 13px)
+    z-index 10
+    background-image url("data:image/svg+xml,<svg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M17.9197 20.6612L16.6754 19.4168L22.2124 13.8798L0 13.8798L0 12.1201L22.2124 12.1201L16.6754 6.58315L17.9197 5.33883L25.5809 13L17.9197 20.6612Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+    width 26px
+    height 26px
+    background-size contain
+    &:hover
+    &:focus
+      outline none
+      background-image url("data:image/svg+xml,<svg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M17.9197 20.6612L16.6754 19.4168L22.2124 13.8798L0 13.8798L0 12.1201L22.2124 12.1201L16.6754 6.58315L17.9197 5.33883L25.5809 13L17.9197 20.6612Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+
+    @media (min-width xl)
+      background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+      width 44px
+      height 44px
+      &:hover
+      &:focus
+        background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+
+.nav-prev
+
+  @media (min-width md)
+    transform rotate(180deg)
+    left -33px
+
+  @media (min-width xl)
+    left -74px
+
+.nav-next
+
+  @media (min-width md)
+    right -33px
+
+  @media (min-width xl)
+    right -74px
+
+.swiper-quote-navigation
+  display block
+  .nav-next,
+  .nav-prev
+    position absolute
+    top calc(50% - 17px)
+    z-index 10
+    background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+    width 35px
+    height 35px
+    background-size contain
+    &:hover
+    &:focus
+      outline none
+      background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+  .nav-prev
+    transform rotate(180deg)
+    left 0
+  .nav-next
+    right 0
+
+  @media (min-width md)
+    .nav-next,
+    .nav-prev
+      top auto
+      bottom 20px
+      width 42px
+      height 42px
+    .nav-prev
+      left auto
+      right 72px
+
+  @media (min-width xl)
+    .nav-next,
+    .nav-prev
+      bottom 50px
+      width 60px
+      height 60px
+    .nav-prev
+      right 100px
+
+.swiper-feedback-author
+  height 100%
+
+.swiper-feedback-author-pagination
+  bottom 0
+  left 0
+  right auto
+  width auto
+  font-family MerriweatherRegular
+  font-size 26px
+  letter-spacing 0.08em
+  color colorDarkBlue
+  .swiper-pagination-total
+    color rgba(25, 45, 89, 0.2)
+
+  @media (min-width md)
+    display flex
+
+  @media (min-width xl)
+    font-size 30px
+
+.swiper-feedback-author-navigation
+  display block
+  .nav-next,
+  .nav-prev
+    position absolute
+    top auto
+    bottom 0
+    z-index 10
+    background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+    width 35px
+    height 35px
+    background-size contain
+    &:hover
+    &:focus
+      outline none
+      background-image url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M49.0294 19.0296L47.2477 20.8114L55.1764 28.7401L0.833252 28.7401L0.833252 31.26L55.1764 31.26L47.2477 39.1886L49.0294 40.9704L59.9999 30L49.0294 19.0296Z' fill='%23192D59'/%3E%3C/g%3E%3C/svg>")
+  .nav-prev
+    transform rotate(180deg)
+    left auto
+    right 55px
+  .nav-next
+    right 0
+
+  @media (min-width md)
+    .nav-next,
+    .nav-prev
+      width 30px
+      height 30px
+    .nav-prev
+      right 50px
+
+  @media (min-width xl)
+    .nav-next,
+    .nav-prev
+      bottom 0
+      width 40px
+      height 40px
+    .nav-prev
+      right 70px
